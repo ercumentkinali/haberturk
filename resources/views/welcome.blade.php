@@ -117,6 +117,11 @@
                                     class="font-poppins text-6px xl:text-xl 2xl:text-2xl mb-2 border-b-2 bg-white line-clamp-3 flex-1">
                                     {{ $new->description }}
                                 </h3>
+                                <div>
+                                    <p>
+                                        DENEME COMMİT
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     @endforeach
