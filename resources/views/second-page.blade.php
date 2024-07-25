@@ -31,7 +31,8 @@
     <div id="mega-menu"
         class="mega-menu bg-arkaplan transition duration-1000 w-full sm:w-2/5 md:w-2/5 h-full absolute -left-1326px top-0 z-40"
         style="transition:1s !important;">
-        <div class="content p-20 text-white font-bold text-40px leading-tight absolute  ">
+        <div
+            class="content p-20  text-white font-bold text-3xl sm:text-40px md:text-3xl  md:justify-center leading-tight absolute  ">
             <p class=" cursor-pointer hover:text-texthover">Anasayfa</p>
             <p class=" cursor-pointer hover:text-texthover">Gündem</p>
             <p class=" cursor-pointer hover:text-texthover">Ekonomi</p>
@@ -48,12 +49,13 @@
         </div>
     </div>
     <div class="main-container flex w-full h-full bg-white relative  ">
-        <div class="left w-full sm:w-2/5 md:w-2/5 h-full flex items-center border-r-2">
+        <div class="left w-full sm:w-full md:w-full h-full flex items-center border-r-2">
 
-            <div class="w-14 navBar relative h-screen border-r z-100 border-gray-400 ">
+            <div class="w-14  navBar relative h-screen border-r z-100 border-gray-400 ">
                 <div class="left h-full">
-                    <div class="side-bar-top flex w-14 h-1/5 px-2 bg-arkaplan " style="transition:1s !important;"></div>
-                    <div class="side-bar-bottom flex w-14 2xl:w-14 xl:x-14 h-4/5 z-100 bg-white border-r-2 ">
+                    <div class="side-bar-top flex w-14  h-1/5 px-2 bg-arkaplan " style="transition:1s !important;">
+                    </div>
+                    <div class="side-bar-bottom flex w-14  h-4/5 z-100 bg-white border-r-2 ">
                         {{-- <i class="mega-x fa-solid fa-bars  items-center justify-center text-xl rotate-90 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 "></i> --}}
                         <div class="mega-x absolute top-1/2 left-1/2 flex">
                             <div class="first border-r-2 border-black h-8 mr-1 block" style="transition:.3s;"></div>
@@ -64,20 +66,21 @@
                     </div>
                 </div>
             </div>
-            <div class="content relative">
-                <div class="content w-full h-full flex flex-col justify-center p-8 sm:p-14 md:p-14 xl:p-14 ">
+            <div class="content w-full h-full relative">
+                <div class="content w-full h-full flex flex-col justify-center p-8 sm:p-14 md:p-10 xl:p-14 ">
                     <div>
-                        <p class="font-abril max-sm:text-sm max-md:text-18px text-22px text-gray-500 ">
+                        <p
+                            class="font-poppins text-22px sm:text-xl md:text-2xl xl:text-3xl 2xl:text-18px text-gray-500 ">
                             25.07.2024</p>
                     </div> <br>{{-- {{ $currentDate }}  --}} {{-- currentdate hatası ben sql bağlantısını yapınca verdiği için ayarlancak --}}
                     <div>
                         <h1
-                            class="text-black font-bold text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-4xl font-abril bg-white h-full ">
+                            class="text-black  text-xl sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl font-abril bg-white h-full ">
                             Bugün ne oldu?</h1> <br>
                     </div>
                     <div>
                         <h2
-                            class="text-gray-600 font-poppins max-sm:text-sm max-md:text-md text-18px overflow-hidden  line-clamp-6 md:line-clamp-6 sm:line-clamp-6">
+                            class="text-gray-600 font-poppins text-8px sm:text-18px md:text-18px xl:text-18px 2xl:text-xl overflow-hidden line-clamp-6 md:line-clamp-8 sm:line-clamp-8">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab modi aspernatur voluptate error
                             est temporibus perspiciatis earum doloribus, dignissimos esse inventore expedita veritatis,
                             qui quasi sapiente neque explicabo commodi reiciendis.Lorem ipsum dolor sit amet consectetur
@@ -86,10 +89,9 @@
                             commodi reiciendis.</h2>
                     </div>
                 </div>
-
             </div>
             <p
-                class="text-gray-500 absolute bottom-0 left-24 sm:left-125px md:left-125px text-8px sm:text-4px md:text-4px xl:text-12px 2xl:text-12px">
+                class="text-gray-500 absolute bottom-0 left-24 sm:left-20 md:left-20 lg:left-20 xl:left-20 2xl:left-20 text-8px sm:text-4px md:text-12px xl:text-12px 2xl:text-12px">
                 &copy; {{ date('Y') }} - Tüm hakları saklıdır.<br> HaberTürk Gazetecelik A.Ş.
             </p>
         </div>
