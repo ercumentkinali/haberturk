@@ -30,6 +30,7 @@ export default {
                 "4px": "4px",
                 "8px": "8px",
                 "6px": "6px",
+                "14px": "14px",
             },
             zIndex: {
                 100: "100",

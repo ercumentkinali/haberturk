@@ -4,28 +4,32 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class NewsController extends Controller
 {
-    public function welcome()
+    public function index()
     {
+        $currentDate = Carbon::today()->toDateString();
+        $currentDate = Carbon::parse($currentDate)->format('d.m.Y');
         $news = News::all(); // Tüm postları alır
-        return view('welcome', compact('news')); // Verileri 'welcome' view'ına gönderir
+        return view('index.default', compact('news', 'currentDate'));
     }
 
-    public function second()
+    public function news()
     {
+        $currentDate = Carbon::today()->toDateString();
+        $currentDate = Carbon::parse($currentDate)->format('d.m.Y');
         $news = News::all(); // Tüm postları alır
-        return view('second-page', compact('news')); // Verileri 'second-page' view'ına gönderir
+        return view('news.index.default', compact('news','currentDate'));
     }
 
-    public function detay()
+    public function show(int $id)
     {
         $news = News::all(); // Belirli bir ID'ye göre veri çeker
-        return view('detay', compact('news')); // Veriyi 'news.show' view'ına gönderir
+        $selectedNews = News::find($id);
+        return view('news.show.default', compact('news', 'selectedNews')); // Veriyi 'news.show' view'ına gönderir
     }
-
-
 
 }
 
