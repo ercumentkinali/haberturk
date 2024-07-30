@@ -9,7 +9,7 @@
     @extends('master.parts.mega-menu')
 
     <!-- Sol Navigasyon Menüsü -->
-    @include('news.show.show-sideBar')
+    @include('master.parts.sideBar')
 
     <!-- Orta İçerik Alanı -->
     @include('news.show.show-left')
