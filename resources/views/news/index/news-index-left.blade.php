@@ -1,6 +1,6 @@
 <div class="left w-full sm:w-full md:w-full h-full  flex items-center border-r-2 ">
 
-    <div class="w-14 navBar relative h-screen border-r z-100 border-gray-400 ">
+    <div class="w-14 sideBar relative h-screen border-r z-100 border-gray-400 ">
         <div class="left h-full">
             <div class="side-bar-top flex w-14  h-1/5 px-2 bg-arkaplan " style="transition:1s !important;">
             </div>

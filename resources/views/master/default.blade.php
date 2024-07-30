@@ -4,7 +4,7 @@
     @include('master.parts.head')
 </head>
 
-<body class="relative h-screen overflow-hidden">
+<body class="relative flex w-full h-screen overflow-hidden">
     @yield('content')
     @include('master.parts.foot')
 </body>

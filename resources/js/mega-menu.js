@@ -1,8 +1,8 @@
-const navBar = document.querySelector(".navBar");
-const sideBarTop = document.querySelector(".navBar .side-bar-top");
-const sideBarBottom = document.querySelector(".navBar .side-bar-bottom");
+const sideBar = document.querySelector(".sideBar");
+const sideBarTop = document.querySelector(".sideBar .side-bar-top");
+const sideBarBottom = document.querySelector(".sideBar .side-bar-bottom");
 
-if (navBar && sideBarTop && sideBarBottom) {
+if (sideBar && sideBarTop && sideBarBottom) {
     sideBarTop.addEventListener("click", () => {
         toggleMenu();
     });
