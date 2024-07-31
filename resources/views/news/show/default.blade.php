@@ -8,7 +8,7 @@
 
     @extends('master.parts.mega-menu')
 
-    <!-- Sol Navigasyon Menüsü -->
+    <!-- Sol sideBar Menüsü -->
     @include('master.parts.sideBar')
 
     <!-- Orta İçerik Alanı -->

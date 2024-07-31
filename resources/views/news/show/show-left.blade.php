@@ -1,10 +1,11 @@
-<div class="left w-full h-1/5 sm:h-full md:h-full sm:w-2/5 md:w-2/5 flex justify-center items-center border-r-2">
+<div
+    class="left w-full h-1/5 sm:h-full md:h-full sm:w-2/5 md:w-2/5 flex justify-center items-center border-r-2 overflow-hidden">
     <div class="content relative w-full h-full sm:h-full md:w-full md:h-full">
         <div class="show-swiper w-full h-full sm:w-full sm:h-full">
-            <div class="swiper-wrapper w-full !h-auto sm:h-auto flex sm:block">
+            <div class="swiper-wrapper w-full h-auto sm:h-full 2xl:h-auto 2xl:w-full  ">
                 @foreach ($news as $key => $new)
-                    <div class="swiper-slide w-auto h-auto border-b-2 sm:h-auto sm:w-full bg-white hover:bg-hover p-4 pt-6 sm:pt-12"
-                        data-id="{{ $new->id }}">
+                    <div class="swiper-slide swiper-slide-show w-full h-auto border-b-2 sm:h-auto sm:w-full bg-white hover:bg-hover p-4 pt-6 sm:pt-12"
+                        style="flex-shrink: inherit  " data-id="{{ $new->id }}">
                         <a href="/news/show/{{ $new->id }}" class="w-full relative flex gap-2">
                             <div class="absolute left-4 -top-6 text-gray-500 font-bold z-30">
                                 <span class="text-5xl">{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>

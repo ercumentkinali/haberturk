@@ -2,7 +2,7 @@ var swiper = new Swiper(".index-swiper", {
     slidesPerView: 5,
     direction: "vertical",
     centeredSlides: true,
-    loop: true,
+
     freeMode: true,
     scrollbar: {
         el: ".swiper-scrollbar",

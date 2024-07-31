@@ -1,5 +1,5 @@
 <div class="first-page main-container sm:flex block w-full h-full bg-arkaplan relative">
-    <div class="left w-full md:w-8/12 h-full justify-between relative">
+    <div class="  left w-full md:w-8/12 h-full justify-between relative">
         <div class="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-5 z-0"
             style="background-image: url('/images/background-image.png');"></div>
         <div class="content w-full h-full flex flex-col justify-center p-20 sm:p-16 md:p-16 xl:p-24 ">
