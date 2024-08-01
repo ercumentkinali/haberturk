@@ -33,7 +33,6 @@ var swiper = new Swiper(".show-swiper", {
     direction: "horizontal",
     freeMode: true,
     scrollbar: {
-        el: ".swiper-scrollbar",
         draggable: true,
     },
     mousewheel: true,
