@@ -17,7 +17,7 @@ if (sideBar && sideBarTop && sideBarBottom) {
 
         if (megaMenu) {
             megaMenu.classList.toggle("-left-1326");
-            megaMenu.classList.toggle("left-0");
+            megaMenu.classList.toggle("left-8");
         }
         if (megaCircle) {
             megaCircle.classList.toggle("text-arkaplan");

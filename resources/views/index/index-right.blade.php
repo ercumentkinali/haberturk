@@ -8,7 +8,7 @@
                         <span
                             class="absolute -top-10 font-bold left-0 right-0 mx-auto text-6xl opacity-10 whitespace-nowrap overflow-y-hidden -z-10">{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
                         <h3
-                            class="font-poppins text-16px  xl:text-xl 2xl:text-2xl mb-2 border-b-4 bg-white line-clamp-3 flex-1">
+                            class="font-poppins text-16px  xl:text-xl 2xl:text-2xl mb-2 border-black border-b bg-white line-clamp-3 flex-1">
                             {{ $new->description }}
                         </h3>
                     </div>

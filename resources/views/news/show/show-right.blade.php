@@ -4,7 +4,7 @@
         <h1 class="font-bold font-poppins text-40px mt-16">{{ $selectedNews->title }}</h1><br>
         <h2 class="font-poppins italic text-gray-500 text-16px md:text-18px border-dashed border-b-2">
             {{ $selectedNews->description }}</h2><br>
-        <img src="{{ $selectedNews->image_url }}" alt="haberpng" class="w-auto h-auto object-cover p-4"><br>
+        <img src="{{ $selectedNews->image_url }}" alt="haberpng" class="w-full h-auto object-contain p-4"><br>
         <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
     </div>
 </div>

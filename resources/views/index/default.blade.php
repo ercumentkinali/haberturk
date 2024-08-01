@@ -4,11 +4,10 @@
 
 @section('content')
 
-    @extends('index.sideBar')
+    @include('index.sideBar')
 
-    @extends('index.index-left')
+    @include('index.index-left')
 
     @include('index.index-right')
-
 
 @endsection

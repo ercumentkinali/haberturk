@@ -1,9 +1,11 @@
 <div id="mega-menu"
-    class="mega-menu bg-arkaplan transition duration-1000 w-full sm:w-2/5 md:w-2/5 h-full absolute -left-1326px top-0 z-40"
+    class="mega-menu bg-arkaplan transition duration-1000 w-full sm:w-full md:w-2/5 h-full absolute -left-1326px top-0 z-40"
     style="transition:1s !important;">
     <div
         class="content flex flex-col justify-center items-start h-full p-20 text-white font-bold text-3xl sm:text-40px leading-tight sm:leading-snug md:text-3xl md:leading-tight lg:text-5xl lg:leading-tight xl:text-5xl xl:leading-tight 2xl:text-5xl 2xl:justify-center 2xl:p-44 2xl:leading-tight ">
-        <p class=" cursor-pointer   hover:text-texthover">Anasayfa</p>
+        <a href="/">
+            <p class="cursor-pointer hover:text-texthover">Anasayfa</p>
+        </a>
         <p class=" cursor-pointer   hover:text-texthover">Gündem</p>
         <p class=" cursor-pointer   hover:text-texthover">Ekonomi</p>
         <p class=" cursor-pointer   hover:text-texthover">Spor</p>
@@ -26,7 +28,7 @@
 
     <div class=" mega-menu absolute bottom-0 w-14 h-4/5 bg-arkaplan -left-1326px top-0 "> </div>
     <p
-        class="text-white absolute bottom-0 left-20 sm:left-24 md:left-20 lg:left-24 xl:left-24 2xl:left-44 text-8px sm:text-4px md:text-8px xl:text-8px 2xl:text-12px">
+        class="text-white absolute bottom-0 left-20 sm:left-24 md:left-20 lg:left-24 xl:left-24 2xl:left-44 text-12px sm:text-4px md:text-12px xl:text-14px 2xl:text-18px">
         &copy; {{ date('Y') }} - Tüm hakları saklıdır.<br> HaberTürk Gazetecelik A.Ş.
     </p>
 </div>

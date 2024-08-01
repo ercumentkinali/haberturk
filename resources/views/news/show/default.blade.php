@@ -6,8 +6,6 @@
 
     @include('master.parts.logo')
 
-    @extends('master.parts.mega-menu')
-
     <!-- Sol sideBar Menüsü -->
     @include('master.parts.sideBar')
 

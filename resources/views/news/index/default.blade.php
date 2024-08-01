@@ -4,9 +4,7 @@
 
 @section('content')
 
-    @extends('master.parts.logo')
-
-    @extends('master.parts.mega-menu')
+    @include('master.parts.logo')
 
     @include('master.parts.sideBar')
 
