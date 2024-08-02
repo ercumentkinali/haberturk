@@ -12,7 +12,7 @@
                         <div class="absolute left-4 -top-6 text-gray-500 font-bold z-30">
                             <span class="text-5xl">{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</span>
                         </div>
-                        <div class="aspect-video w-1/2 2xl:w-1/2 z-30">
+                        <div class="aspect-video sm:w-1/2 md:w-1/2 lg:w-1/2 z-30">
                             <img src="{{ $new->image_url }}" alt="haberpng"
                                 class="w-full h-full object-cover mb-40 sm:mb-0 sm:object-cover 2xl:object-cover">
                         </div>

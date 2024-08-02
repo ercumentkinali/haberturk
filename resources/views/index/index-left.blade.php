@@ -9,12 +9,12 @@
             </div>
             <div>
                 <h1
-                    class="text-white text-6xl sm:text-7xl md:text-7xl xl:text-8xl 2xl:text-9xl font-abril bg-arkaplan h-auto justify-center items-center">
+                    class="text-white text-6xl sm:text-7xl md:text-7xl  xl:text-8xl 2xl:text-9xl font-abril bg-arkaplan h-auto justify-center items-center">
                     Bugün <br> ne oldu?</h1>
             </div>
             <div>
                 <h2
-                    class=" text-white font-poppins text-12px xl:text-sm 2xl:text-base text-clip overflow-hidden mb-4 leading-tight sm:line-clamp-2 line-clamp-4 ">
+                    class=" text-white font-poppins text-12px md:text-14px xl:text-sm lg:text-2xl 2xl:text-base text-clip overflow-hidden mb-4 leading-tight sm:line-clamp-2 line-clamp-4 ">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum porro ipsam voluptatibus quis ad
                     laboriosam animi, aliquid dignissimos. Mollitia dolores culpa labore quisquam esse voluptatem
                     expedita voluptates sint a quod!Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
@@ -35,7 +35,8 @@
             </div>
 
         </div>
-        <p class="text-white absolute bottom-10 left-20  text-8px sm:text-8px md:text-8px xl:text-12px 2xl:text-18px">
+        <p
+            class="text-white absolute bottom-10 left-20  text-8px sm:text-8px md:text-12px lg:text-12px xl:text-12px 2xl:text-18px">
             &copy; {{ date('Y') }} - Tüm hakları saklıdır.HaberTürk Gazetecelik A.Ş.
         </p>
     </div>
