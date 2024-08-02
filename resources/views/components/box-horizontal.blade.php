@@ -1,6 +1,6 @@
 <div class="swiper-slide swiper-slide-show w-full h-auto border-b-2 sm:h-auto sm:w-full bg-white hover:bg-hover p-4 pt-6 sm:pt-12"
     style="flex-shrink: inherit">
-    <a href="/news/show/{{ $id ?? '' }}" class="w-full h-full relative flex gap-2">
+    <a href="{{ $id ?? '' }}" class="w-full h-full relative flex gap-2">
         <div class="absolute left-4 -top-6 text-gray-500 font-bold z-30">
             <span class="text-5xl">{{ $order ?? '' }}</span>
         </div>

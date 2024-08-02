@@ -6,8 +6,8 @@
 
     @include('index.sideBar')
 
-    @include('index.index-left')
+    @include('index.left')
 
-    @include('index.index-right')
+    @include('index.right')
 
 @endsection

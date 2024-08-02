@@ -24,7 +24,7 @@
                     {{ $description ?? '' }}</p>
             </div>
             <div class=" pt-3">
-                <a href="/news/show/{{ $id ?? '' }}" target="_blank" rel=”noopener noreferrer
+                <a href="{{ $id ?? '' }}" target="_blank" rel=”noopener noreferrer
                     class=" text-black h-full font-poppins font-bold text-12px md:text-12px lg:text-14px xl:text-18px 2xl:text-14px border-detay border-2 justify-center p-1 px-4 ">DETAY</a>
 
                 <button id="showLeftPanelButton"
