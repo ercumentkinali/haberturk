@@ -10,9 +10,9 @@
     @include('master.parts.sideBar')
 
     <!-- Orta İçerik Alanı -->
-    @include('news.show.show-left')
+    @include('news.show.left')
 
     <!-- Sağ Detay Alanı -->
-    @include('news.show.show-right')
+    @include('news.show.right')
 
 @endsection

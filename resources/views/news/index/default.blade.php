@@ -9,10 +9,10 @@
     @include('master.parts.sideBar')
 
     <!-- Sol ekran -->
-    @include('news.index.news-index-left')
+    @include('news.index.left')
 
     <!-- Sağ Detay Alanı -->
-    @include('news.index.news-index-right')
+    @include('news.index.right')
 
 
 @endsection

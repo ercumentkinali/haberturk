@@ -12,11 +12,13 @@ class NewsFactory extends Factory
 
     public function definition()
     {
+        $images = glob(public_path('images') . '/*.jpg');
+        $randomImage = basename($images[array_rand($images)]);
         return [
             'title' => $this->faker->sentence,
             'description' => $this->faker->paragraph,
             'content' => $this->faker->text,
-            'image_url' => $this->faker->imageUrl(),
+            'image_url' => 'images/' . $randomImage,                                                      // $this->faker->imageUrl(),//
             'category_id' => Category::factory(), // İlişkili kategori oluşturur
             'created_at' => now(),
             'updated_at' => now(),

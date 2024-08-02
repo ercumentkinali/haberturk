@@ -28,6 +28,7 @@ class NewsController extends Controller
     {
         $news = News::all(); // Belirli bir ID'ye göre veri çeker
         $selectedNews = News::find($id);
+        // eğer haber yoksa  404 error u ver
         return view('news.show.default', compact('news', 'selectedNews')); // Veriyi 'news.show' view'ına gönderir
     }
 
