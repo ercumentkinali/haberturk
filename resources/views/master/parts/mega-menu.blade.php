@@ -6,13 +6,9 @@
         <a href="/">
             <p class="cursor-pointer hover:text-texthover">Anasayfa</p>
         </a>
-        <p class=" cursor-pointer   hover:text-texthover">Gündem</p>
-        <p class=" cursor-pointer   hover:text-texthover">Ekonomi</p>
-        <p class=" cursor-pointer   hover:text-texthover">Spor</p>
-        <p class=" cursor-pointer   hover:text-texthover">Magazin</p>
-        <p class=" cursor-pointer   hover:text-texthover">Dünya</p>
-        <p class=" cursor-pointer   hover:text-texthover">Teknoloji</p>
-        <p class=" cursor-pointer   hover:text-texthover">Sağlık</p>
+        @foreach ($categories as $category)
+            <p class="cursor-pointer hover:text-texthover">{{ $category->category_name }}</p>
+        @endforeach
         <div class="flex space-x-4 mt-24">
             <a href="https://www.facebook.com/Haberturk" target="_blank" class="text-white hover:text-hover">
                 <i class="fab fa-facebook-f fa-xs"></i>
