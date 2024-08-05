@@ -11,13 +11,14 @@ class CategorySeeder extends Seeder
     {
         //Category::factory()->count(5)->create(); // 5 adet kategori oluşturur
         $categories = [
-            ['category_name' => 'Gündem', 'description' => 'Gündem haberleri'],
-            ['category_name' => 'Ekonomi', 'description' => 'Ekonomi haberleri'],
-            ['category_name' => 'Spor', 'description' => 'Spor haberleri'],
-            ['category_name' => 'Magazin', 'description' => 'Magazin haberleri'],
-            ['category_name' => 'Dünya', 'description' => 'Dünya haberleri'],
-            ['category_name' => 'Teknoloji', 'description' => 'Teknoloji haberleri'],
-            ['category_name' => 'Sağlık', 'description' => 'Sağlık haberleri'],
+            ['slug'=>'gundem', 'name' => 'Gündem', 'description' => 'Gündem haberleri'],
+            ['slug'=>'ekonomi', 'name' => 'Ekonomi', 'description' => 'Ekonomi haberleri'],
+            ['slug'=>'spor', 'name' => 'Spor', 'description' => 'Spor haberleri'],
+            ['slug'=>'magazin', 'name' => 'Magazin', 'description' => 'Magazin haberleri'],
+            ['slug'=>'dunya', 'name' => 'Dünya', 'description' => 'Dünya haberleri'],
+            ['slug'=>'teknoloji', 'name' => 'Teknoloji', 'description' => 'Teknoloji haberleri'],
+            ['slug'=>'saglik', 'name' => 'Sağlık', 'description' => 'Sağlık haberleri'],
+
 
         ];
 

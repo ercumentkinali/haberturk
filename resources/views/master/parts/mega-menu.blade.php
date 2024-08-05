@@ -8,7 +8,7 @@
         </a>
         @foreach ($categories as $category)
             <p class="cursor-pointer hover:text-texthover"><a
-                    href="{{ route('category.show', $category->id) }}">{{ $category->category_name }}</a></p>
+                    href="{{ route('category.show', $category->slug) }}">{{ $category->name }}</a></p>
         @endforeach
         <div class="flex space-x-4 mt-24">
             <a href="https://www.facebook.com/Haberturk" target="_blank" class="text-white hover:text-hover">

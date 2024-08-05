@@ -34,24 +34,29 @@ class NewsController extends Controller
         }
         return view('news.show.default', compact('news', 'selectedNews')); // Veriyi 'news.show' view'ına gönderir
     }
-    public function showByCategory($id)
+    public function showByCategory($slug)
     {
+
         $currentDate = Carbon::today()->toDateString();
         $currentDate = Carbon::parse($currentDate)->format('d.m.Y');
-        $category = Category::findOrFail($id);
+        $category = Category::where('slug', $slug)->firstOrFail();
+        $category_id= $category->id ;
         $news = News::all();
-        $news = News::where('category_id', $id)->get();
-
+        $news = News::where('category_id', $category_id)->get();
         return view('category.index.default', compact('category', 'news','currentDate'));
     }
+
+
+
+
     // public function showByCategoryDetail($id)
     // {
     //     $category = Category::findOrFail($id);
     //     $news = News::where('category_id', $id)->get();
 
-    //     return view('category.show.default', compact('category', 'news'));
+    //      return view('category.show.default', compact('category', 'news'));
 
-    // }
+    //  }
 
 }
 

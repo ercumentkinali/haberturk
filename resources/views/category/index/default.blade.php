@@ -1,6 +1,6 @@
 @extends('master.default')
 
-@section('title', $category->category_name)
+@section('title', $category->name)
 
 @section('content')
 

@@ -9,7 +9,6 @@
                 <x-box-horizontal>
                     <x-slot name="id">/news/show/{{ $new->id }}</x-slot>
                     <x-slot name="description">{{ $new->description }}</x-slot>
-
                     <x-slot name="image">{{ $new->image_url }}</x-slot>
                     <x-slot name="date">{{ $new->created_at }}</x-slot>
                     <x-slot name="order">{{ str_pad($key + 1, 2, '0', STR_PAD_LEFT) }}</x-slot>
