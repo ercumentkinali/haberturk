@@ -8,8 +8,9 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [NewsController::class, 'index']);
 Route::get('/news', [NewsController::class, 'news']);
-Route::get('/news/show/{id?}', [NewsController::class, 'show']);
+Route::get('/news/show/{id?}', [NewsController::class, 'show'])->name('news.show');
+Route::get('/category/{id?}', [NewsController::class, 'showByCategory'])->name('category.show');
 
-/// artical diye yapıcam haber gelicek yine başka tablodan gelicek
+
 Route::get('/articles', [ArticleController::class, 'index']);
 Route::get('/articles/show/{id?}', [ArticleController::class, 'show']);

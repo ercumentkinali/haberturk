@@ -20,7 +20,7 @@ class ArticleFactory extends Factory
             'description' => $this->faker->paragraph,
             'content' => $this->faker->text,
             'image_url' => 'images/' . $randomImage,                                                      // $this->faker->imageUrl(),//
-            'category_id' => Category::inRandomOrder()->first()->id, //Category::factory(), // İlişkili kategori oluşturur
+            'category_id' => Category::inRandomOrder()->first()->id,
             'created_at' => now(),
             'updated_at' => now(),
         ];

@@ -1,6 +1,6 @@
 @extends('master.default')
 
-@section('title', 'News')
+@section('title', $category->category_name)
 
 @section('content')
 
@@ -9,10 +9,11 @@
     @include('master.parts.sideBar')
 
 
-    @include('news.index.left')
+
+    @include('category.index.left')
 
 
-    @include('news.index.right')
+    @include('category.index.right')
 
 
 @endsection

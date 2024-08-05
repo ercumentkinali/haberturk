@@ -3,11 +3,12 @@
     style="transition:1s !important;">
     <div
         class="content flex flex-col justify-center items-start h-full p-20 text-white font-bold text-3xl sm:text-40px leading-tight sm:leading-snug md:text-3xl md:leading-tight lg:text-5xl lg:leading-tight xl:text-5xl xl:leading-tight 2xl:text-5xl 2xl:justify-center 2xl:p-44 2xl:leading-tight ">
-        <a href="/">
+        <a href="/news">
             <p class="cursor-pointer hover:text-texthover">Anasayfa</p>
         </a>
         @foreach ($categories as $category)
-            <p class="cursor-pointer hover:text-texthover">{{ $category->category_name }}</p>
+            <p class="cursor-pointer hover:text-texthover"><a
+                    href="{{ route('category.show', $category->id) }}">{{ $category->category_name }}</a></p>
         @endforeach
         <div class="flex space-x-4 mt-24">
             <a href="https://www.facebook.com/Haberturk" target="_blank" class="text-white hover:text-hover">
