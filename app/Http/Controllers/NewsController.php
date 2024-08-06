@@ -17,7 +17,6 @@ class NewsController extends Controller
         $news = News::all();
         return view('index.default', compact('news', 'currentDate'));
     }
-
     public function news()
     {
         $currentDate = Carbon::today()->toDateString();
@@ -25,24 +24,18 @@ class NewsController extends Controller
         $news = News::all();
         return view('news.index.default', compact('news','currentDate'));
     }
-
     public function show(string $categorySlug, int $id, string $titleSlug)
     {
         $selectedNews = News::with('category')->find($id);
         $news = News::all();
-
         if (!$selectedNews || Str::slug($selectedNews->title) !== $titleSlug || Str::slug($selectedNews->category->name) !== $categorySlug) {
             abort(404);
         }
-
-
-
         return view('news.show.default', compact('news', 'selectedNews'));
     }
 
     public function showByCategory($slug)
     {
-
         $currentDate = Carbon::today()->toDateString();
         $currentDate = Carbon::parse($currentDate)->format('d.m.Y');
         $category = Category::where('slug', $slug)->firstOrFail();
