@@ -8,7 +8,7 @@ use App\Http\Controllers\CategoryController;
 
 Route::get('/', [NewsController::class, 'index']);
 Route::get('/news', [NewsController::class, 'news']);
-Route::get('/news/show/{id}-{titleSlug}', [NewsController::class, 'show'])->name('news.show');
+Route::get('/news/show/{categorySlug}/{id}-{titleSlug}', [NewsController::class, 'show'])->name('news.show');
 
 Route::get('/category/{slug}', [NewsController::class, 'showByCategory'])->name('category.show');
 

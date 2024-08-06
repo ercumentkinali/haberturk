@@ -4,7 +4,8 @@
         <div class="swiper-wrapper ml-14 sm:ml-0">
             @foreach ($news as $key => $new)
                 <x-box-vertical>
-                    <x-slot name="id">/news/show/{{ $new->id }}-{{ Str::slug($new->title) }}</x-slot>
+                    <x-slot
+                        name="id">/news/show/{{ Str::slug($new->category->name) }}/{{ $new->id }}-{{ Str::slug($new->title) }}</x-slot>
                     <x-slot name="title">{{ $new->title }}</x-slot>
                     <x-slot name="description">{{ $new->description }}</x-slot>
                     <x-slot name="image">/{{ $new->image_url }}</x-slot>

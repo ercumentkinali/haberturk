@@ -26,13 +26,16 @@ class NewsController extends Controller
         return view('news.index.default', compact('news','currentDate'));
     }
 
-    public function show(int $id, string $titleSlug)
+    public function show(string $categorySlug, int $id, string $titleSlug)
     {
-        $selectedNews = News::find($id);
+        $selectedNews = News::with('category')->find($id);
         $news = News::all();
-        if (!$selectedNews || Str::slug($selectedNews->title) !== $titleSlug) {
+
+        if (!$selectedNews || Str::slug($selectedNews->title) !== $titleSlug || Str::slug($selectedNews->category->name) !== $categorySlug) {
             abort(404);
         }
+
+
 
         return view('news.show.default', compact('news', 'selectedNews'));
     }

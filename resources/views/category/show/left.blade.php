@@ -8,7 +8,7 @@
             @foreach ($news as $key => $new)
                 <x-box-horizontal>
                     <x-slot
-                        name="id">{{ route('news.show', ['id' => $id ?? '', 'titleSlug' => Str::slug($title ?? '')]) }}</x-slot>
+                        name="id">/news/show/{{ Str::slug($new->category->name) }}/{{ $new->id }}-{{ Str::slug($new->title) }}</x-slot>
                     <x-slot name="description">{{ $new->description }}</x-slot>
                     <x-slot name="image">{{ $new->image_url }}</x-slot>
                     <x-slot name="date">{{ $new->created_at }}</x-slot>
