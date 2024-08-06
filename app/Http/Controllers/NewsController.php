@@ -6,6 +6,7 @@ use App\Models\News;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Models\Category;
+use Illuminate\Support\Str;
 
 class NewsController extends Controller
 {
@@ -13,7 +14,7 @@ class NewsController extends Controller
     {
         $currentDate = Carbon::today()->toDateString();
         $currentDate = Carbon::parse($currentDate)->format('d.m.Y');
-        $news = News::all(); // Tüm postları alır
+        $news = News::all();
         return view('index.default', compact('news', 'currentDate'));
     }
 
@@ -21,19 +22,21 @@ class NewsController extends Controller
     {
         $currentDate = Carbon::today()->toDateString();
         $currentDate = Carbon::parse($currentDate)->format('d.m.Y');
-        $news = News::all(); // Tüm postları alır
+        $news = News::all();
         return view('news.index.default', compact('news','currentDate'));
     }
 
-    public function show(int $id)
+    public function show(int $id, string $titleSlug)
     {
-        $news = News::all(); // Belirli bir ID'ye göre veri çeker
         $selectedNews = News::find($id);
-        if (!$selectedNews) {
+        $news = News::all();
+        if (!$selectedNews || Str::slug($selectedNews->title) !== $titleSlug) {
             abort(404);
         }
-        return view('news.show.default', compact('news', 'selectedNews')); // Veriyi 'news.show' view'ına gönderir
+
+        return view('news.show.default', compact('news', 'selectedNews'));
     }
+
     public function showByCategory($slug)
     {
 
@@ -45,18 +48,5 @@ class NewsController extends Controller
         $news = News::where('category_id', $category_id)->get();
         return view('category.index.default', compact('category', 'news','currentDate'));
     }
-
-
-
-
-    // public function showByCategoryDetail($id)
-    // {
-    //     $category = Category::findOrFail($id);
-    //     $news = News::where('category_id', $id)->get();
-
-    //      return view('category.show.default', compact('category', 'news'));
-
-    //  }
-
 }
 

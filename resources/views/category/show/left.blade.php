@@ -7,7 +7,8 @@
         <div class="swiper-wrapper w-full h-auto sm:h-full 2xl:h-auto 2xl:w-full  ">
             @foreach ($news as $key => $new)
                 <x-box-horizontal>
-                    <x-slot name="id">/news/show/{{ $new->id }}</x-slot>
+                    <x-slot
+                        name="id">{{ route('news.show', ['id' => $id ?? '', 'titleSlug' => Str::slug($title ?? '')]) }}</x-slot>
                     <x-slot name="description">{{ $new->description }}</x-slot>
                     <x-slot name="image">{{ $new->image_url }}</x-slot>
                     <x-slot name="date">{{ $new->created_at }}</x-slot>
