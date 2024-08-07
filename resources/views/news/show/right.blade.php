@@ -6,6 +6,12 @@
             {{ $selectedNews->description }}</h2><br>
         <img src="/{{ $selectedNews->image_url }}" alt="haberjpg" class="w-full h-auto object-contain p-4"><br>
         <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
+        <div class="sub-image flex justify-center items-center">
+        <img src="/{{ $selectedNews->sub_image_url }}" alt="haberjpg" class=" w-2/3 h-auto object-contain p-4"><br>
+        </div>
+        <div class="sub-content">
+        <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->sub_content }}</p>
+        </div>
     </div>
     @foreach ($youtubeVideos as $video)
             <div class="youtube-video my-4">

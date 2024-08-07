@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('title'); // Başlık sütunu
             $table->text('description'); // Açıklama sütunu
             $table->longText('content'); // İçerik sütunu
+            $table->longText('sub_content');
+            $table->string('sub_image_url')->nullable();
             $table->string('image_url')->nullable(); // Resim URL sütunu, boş bırakılabilir
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->timestamps();
