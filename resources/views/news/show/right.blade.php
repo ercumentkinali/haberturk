@@ -14,8 +14,8 @@
      @endforeach
     <div class="related-news mt-8">
         <div class="text-center">
-        <h3 class="font-bold text-5xl mb-4 justify-center  text-gray-700">İlgili Haberler</h3>
-    </div>
+        <h3 class="font-bold text-5xl mb-4 justify-center text-gray-700">İlgili Haberler</h3>
+        </div>
         @if($relatedNews->isNotEmpty())
             @foreach ($relatedNews as $news)
                 <div class="related-news-item mb-2 justify-center">
@@ -28,46 +28,17 @@
                     </a>
                     <img src="/{{ $news->image_url }}" alt="haberjpg" class="w-full h-auto object-contain p-4"><br>
                     <p class="font-poppins italic text-gray-500 text-16px md:text-18px px-5">{{ $news->description }}</p>
+                    @foreach ($youtubeVideos as $video)
+                            <div class="youtube-video my-4">
+                                 <iframe width="850" height="400" class="p-4" src="{{ $video }}" ></iframe>
+                            </div>
+                    @endforeach
                 </div>
             @endforeach
         @else
             <p>Bu kategoride başka haber bulunmuyor.</p>
         @endif
     </div>
-        {{-- <div class="fake-content px-5">
-             <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
-             <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
-             <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
-        </div>
-                 @foreach ($randomImages as $image)
-                     <div class="random-image my-4">
-                        <img src="/{{ $image }}" alt="Random Image" class="w-full h-auto object-contain p-4">
-                     </div>
-                 @endforeach
-                 <div class="fake-content px-5">
-                    <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
-                    <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
-                    <p class="font-poppins italic text-gray-500 text-16px md:text-2xl">{{ $selectedNews->content }}</p>
-               </div> --}}
-               @foreach ($youtubeVideos as $video)
-               <div class="youtube-video my-4">
-                    <iframe width="850" height="400" class="p-4" src="{{ $video }}" ></iframe>
-               </div>
-                @endforeach
-
-               {{-- @foreach ($randomTexts as $text)
-               <p class="random-text font-poppins italic text-gray-500 text-16px md:text-2xl my-4 px-5">{{ $text }}</p>
-               @endforeach
-
-               @foreach ($randomImages as $image)
-                     <div class="random-image my-4">
-                        <img src="/{{ $image }}" alt="Random Image" class="w-full h-auto object-contain p-4">
-                     </div>
-                 @endforeach
-
-                 @foreach ($randomTexts as $text)
-                 <p class="random-text font-poppins italic text-gray-500 text-16px md:text-2xl my-4 px-5">{{ $text }}</p>
-                 @endforeach--}}
 </div>
 
 
